@@ -47,7 +47,6 @@ class LoggerHandler extends AbstractProcessingHandler
             ]]);
 			
 			if(!empty($record['context'])){
-
                 if( array_keys($facts) !== range(0, count($facts) - 1) ){
                     $newFacts = [];
                     $contexts_names = array_keys($facts);
