@@ -45,6 +45,37 @@ class LoggerHandler extends AbstractProcessingHandler
                 'name'  => 'Sent Date',
                 'value' => date('D, M d Y H:i:s e'),
             ]]);
+			
+			if(!empty($record['context'])){
+
+                if( array_keys($facts) !== range(0, count($facts) - 1) ){
+                    $newFacts = [];
+                    $contexts_names = array_keys($facts);
+                    foreach ($contexts_names as $index) {
+
+                        if (is_a($facts[$index], 'Exception')) {
+                            $message = [
+                                'message' => $facts[$index]->getMessage(),
+                                'code' => $facts[$index]->getCode(),
+                                'file' => $facts[$index]->getFile(),
+                                'line' => $facts[$index]->getLine(),
+                                'trace' => $facts[$index]->getTraceAsString(),
+                            ];
+
+                            $newFacts[] = [
+                                'name' => $index,
+                                'value' => json_encode($message, JSON_PRETTY_PRINT),
+                            ];
+                        }else{
+                            $newFacts[] = [
+                                'name' => $facts[$index]['name'],
+                                'value' => $facts[$index]['value'],
+                            ];
+                        }
+                    }
+                    $facts = $newFacts;
+                }
+            }
 
             return $this->useCardStyling($record['level_name'], $record['message'], $facts);
         } else {
