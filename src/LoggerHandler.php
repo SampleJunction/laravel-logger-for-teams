@@ -52,20 +52,34 @@ class LoggerHandler extends AbstractProcessingHandler
                     $contexts_names = array_keys($facts);
                     foreach ($contexts_names as $index) {
 
-                        if (is_a($facts[$index], 'Exception')) {
-                            $message = [
-                                'message' => $facts[$index]->getMessage(),
-                                'code' => $facts[$index]->getCode(),
-                                'file' => $facts[$index]->getFile(),
-                                'line' => $facts[$index]->getLine(),
-                                'trace' => $facts[$index]->getTraceAsString(),
+                        if (is_a($facts[$index], 'Exception')) {							
+							$newFacts[] = [
+                                'name' => 'Message',
+                                'value' => $facts[$index]->getMessage(),
+                            ];
+							$newFacts[] = [
+                                'name' => 'Error Code',
+                                'value' => $facts[$index]->getCode(),
+                            ];
+							$newFacts[] = [
+                                'name' => 'File',
+                                'value' => $facts[$index]->getFile(),
+                            ];
+							$newFacts[] = [
+                                'name' => 'Line',
+                                'value' => $facts[$index]->getLine(),
                             ];
 
                             $newFacts[] = [
-                                'name' => $index,
-                                'value' => json_encode($message, JSON_PRETTY_PRINT),
+                                'name' => 'Stack Trace',
+                                'value' => $facts[$index]->getTraceAsString(),
                             ];
-                        }else{
+                        }else if( !is_int($index) ) {
+                            $newFacts[] = [
+                                'name' => $index,
+                                'value' => $facts[$index],
+                            ];
+                        }else if(is_int($index)){
                             $newFacts[] = [
                                 'name' => $facts[$index]['name'],
                                 'value' => $facts[$index]['value'],
