@@ -51,8 +51,7 @@ class LoggerHandler extends AbstractProcessingHandler
                     $newFacts = [];
                     $contexts_names = array_keys($facts);
                     foreach ($contexts_names as $index) {
-
-                        if (is_a($facts[$index], 'Exception')) {							
+						if (is_a($facts[$index], 'Exception')) {							
 							$newFacts[] = [
                                 'name' => 'Message',
                                 'value' => $facts[$index]->getMessage(),
