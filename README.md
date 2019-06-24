@@ -1,8 +1,8 @@
 # laravel-logger-for-teams
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/margatampu/laravel-teams-logging.svg?style=flat-square)](https://packagist.org/packages/margatampu/laravel-teams-logging)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/samplejunction/laravel-logger-for-teams.svg)](https://packagist.org/packages/samplejunction/laravel-logger-for-teams)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/margatampu/laravel-teams-logging.svg?style=flat-square)](https://packagist.org/packages/margatampu/laravel-teams-logging)
+[![Total Downloads](https://img.shields.io/packagist/dt/samplejunction/laravel-logger-for-teams.svg)](https://packagist.org/packages/samplejunction/laravel-logger-for-teams)
 
 Laravel handler to sending messages to Microsoft Teams using the Incoming Webhook connector.
 
@@ -81,25 +81,25 @@ Here are some results of notifications sent to microsoft teams channel using car
 ![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-1debug.png)
 
 - Info log preview in microsoft teams channel
-![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-2info.png)
+![Screenshot](https://raw.githubusercontent.com/samplejunction/laravel-logger-for-teams/master/assets/ltl-2info.png)
 
 - Notice log preview in microsoft teams channel
-![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-3notice.png)
+![Screenshot](https://raw.githubusercontent.com/samplejunction/laravel-logger-for-teams/master/assets/ltl-3notice.png)
 
 - Warning log preview in microsoft teams channel
-![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-4warning.png)
+![Screenshot](https://raw.githubusercontent.com/samplejunction/laravel-logger-for-teams/master/assets/ltl-4warning.png)
 
 - Error log preview in microsoft teams channel
-![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-5error.png)
+![Screenshot](https://raw.githubusercontent.com/samplejunction/laravel-logger-for-teams/master/assets/ltl-5error.png)
 
 - Critical log preview in microsoft teams channel
-![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-6critical.png)
+![Screenshot](https://raw.githubusercontent.com/samplejunction/laravel-logger-for-teams/master/assets/ltl-6critical.png)
 
 - Alert log preview in microsoft teams channel
-![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-7alert.png)
+![Screenshot](https://raw.githubusercontent.com/samplejunction/laravel-logger-for-teams/master/assets/ltl-7alert.png)
 
 - Emergency log preview in microsoft teams channel
-![Screenshot](https://raw.githubusercontent.com/margatampu/laravel-teams-logging/master/assets/ltl-8emergency.png)
+![Screenshot](https://raw.githubusercontent.com/samplejunction/laravel-logger-for-teams/master/assets/ltl-8emergency.png)
 
 ## License
 
