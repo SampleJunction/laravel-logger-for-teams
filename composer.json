@@ -1,0 +1,23 @@
+{
+    "name": "samplejunction/laravel-logger-for-teams",
+    "description": "Laravel handler to sending messages to Microsoft Teams using the Incoming Webhook connector",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pankaj Jha",
+            "email": "pankajj@samplejunction.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "monolog/monolog": "^1.23"
+    },
+    "require-dev": {
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SampleJunction\\LaravelLoggerForTeams\\": "src/"
+        }
+    }
+}
